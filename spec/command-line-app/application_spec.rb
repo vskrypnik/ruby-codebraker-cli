@@ -9,9 +9,7 @@ RSpec.describe Application do
     end
 
     after(:all) do
-      if File.exist? 'score.yaml'
-        File.delete 'score.yaml'
-      end
+      File.delete('score.yaml') if File.exist?('score.yaml')
     end
 
     describe 'invalid input' do
