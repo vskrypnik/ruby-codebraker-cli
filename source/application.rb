@@ -19,6 +19,8 @@ class Application
     end
   end
 
+  private
+
   def play
     until @game.finish?
       print '> '
@@ -86,14 +88,4 @@ class Application
   def hashcode(nickname)
     Digest::MD5.hexdigest nickname.to_s
   end
-
-  private :play
-  private :hint
-  private :check
-  private :process
-  private :hashcode
-
-  private :save?
-  private :again?
-
 end
